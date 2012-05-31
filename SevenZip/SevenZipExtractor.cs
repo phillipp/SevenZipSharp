@@ -25,7 +25,7 @@ using System.Threading;
 #else
 using System.Linq;
 #endif
-using SevenZip.Sdk.Compression.Lzma;
+using SevenZip.Compression.LZMA;
 #if MONO
 using SevenZip.Mono.COM;
 #endif

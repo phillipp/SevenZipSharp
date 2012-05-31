@@ -27,8 +27,8 @@ using System.Runtime.InteropServices;
 #if !WINCE
 using System.Security.Permissions;
 #endif
-using SevenZip.Sdk;
-using SevenZip.Sdk.Compression.Lzma;
+using SevenZip;
+using SevenZip.Compression.LZMA;
 #if MONO
 using SevenZip.Mono.COM;
 #endif
@@ -1972,16 +1972,16 @@ namespace SevenZip
         {
             #region LZMA properties definition
 
-            CoderPropId[] propIDs =
+            CoderPropID[] propIDs =
                 {
-                    CoderPropId.DictionarySize,
-                    CoderPropId.PosStateBits,
-                    CoderPropId.LitContextBits,
-                    CoderPropId.LitPosBits,
-                    CoderPropId.Algorithm,
-                    CoderPropId.NumFastBytes,
-                    CoderPropId.MatchFinder,
-                    CoderPropId.EndMarker
+                    CoderPropID.DictionarySize,
+                    CoderPropID.PosStateBits,
+                    CoderPropID.LitContextBits,
+                    CoderPropID.LitPosBits,
+                    CoderPropID.Algorithm,
+                    CoderPropID.NumFastBytes,
+                    CoderPropID.MatchFinder,
+                    CoderPropID.EndMarker
                 };
             object[] properties =
                 {
